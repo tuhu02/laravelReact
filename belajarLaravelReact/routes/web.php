@@ -3,7 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use Laravel\Fortify\Features;
-use App\Http\Controllers\AboutController;   
+use App\Http\Controllers\AboutController;
+use App\Http\Controllers\PostController;
 
 Route::get('/', function () {
     return Inertia::render('welcome', [
@@ -18,5 +19,8 @@ Route::middleware(['auth', 'verified'])->group(function () {
 }); 
 
 Route::get('/about', [AboutController::class, 'index'])->name('about');
+
+Route::get('/posts', [PostController::class, 'index'])->name('posts.index');
+
 
 require __DIR__.'/settings.php';
