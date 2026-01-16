@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     @inertiaHead
-    @vite('resources/js/app.jsx')
+    @viteReactRefresh
+    @vite('resources/js/app.tsx')
 </head>
 <body>
     @inertia
