@@ -17,5 +17,13 @@ class PostSeeder extends Seeder
             'title' => 'First Post',
             'content' => 'This is the content of the first post.',
         ]);
+        Post::create([
+            'title' => 'Second Post',
+            'content' => 'This is the content of the first post.',
+        ]);
+        Post::create([
+            'title' => 'Third Post',
+            'content' => 'This is the content of the first post.',
+        ]);
     }
 }

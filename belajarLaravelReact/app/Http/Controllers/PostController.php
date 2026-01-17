@@ -11,7 +11,7 @@ class PostController extends Controller
     public function index(){
         $post = Post::all();
 
-        return Inertia::render( 'post', [
+        return Inertia::render('posts', [
             'posts' => $post,
         ]);
     }
