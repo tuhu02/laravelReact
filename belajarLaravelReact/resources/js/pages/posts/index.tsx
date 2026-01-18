@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link, router } from '@inertiajs/react';
 
 interface Post {
     id: number;
@@ -14,7 +15,7 @@ export default function PostsPage({ posts }: Props) {
     return (
         <>
             <div style={{ marginBottom: '20px', marginTop: '20px' }}>
-                <a href="" style={{ background: '#22bd17', borderRadius: '6px', padding: '2px'}}>Tambah</a>
+                <a href="/posts/create" style={{ background: '#22bd17', borderRadius: '6px', padding: '2px'}}>Tambah</a>
             </div>
             <table
                 style={{
@@ -42,9 +43,21 @@ export default function PostsPage({ posts }: Props) {
                             <td style={{ border: '1px solid #fff', padding: '8px' }}>
                                 {post.content}
                             </td>
-                            <td style={{ padding: '8px' }}>
-                                <a style={{ background: '#e70000', borderRadius: '6px', padding: '2px', marginRight: '10px'  }} href="">Hapus</a>
-                                <a style={{ background: '#009fb0', borderRadius: '6px', padding: '2px' }} href="">Edit</a>
+                            <td style={{ padding: '8px'}}>
+                                <button onClick={() => 
+                                { 
+                                    if (confirm('Are you sure you want to delete this post?')) {
+                                        router.delete(`/posts/${post.id}`);
+                                    }
+                                }
+                                } style={{ backgroundColor: '#df0000', padding: '5px', borderRadius: '6px', marginRight: '10px'  }}>
+                                    delete
+                                </button>
+                                <button
+                                    onClick={() => router.get(`/posts/${post.id}`)} style={{  backgroundColor: '#3fbd00', padding: '5px', borderRadius: '6px' }}
+                                >
+                                    Edit
+                                </button>
                             </td>
                         </tr>
                     ))}
