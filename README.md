@@ -41,25 +41,6 @@ Project ini dibuat khusus untuk latihan belajar CRUD, bukan untuk production.
 
 ---
 
-### 📌 Mau versi lain?
-
-<details>
-<summary><b>1 Paragraf Doang</b></summary>
-
-Project CRUD sederhana Laravel + React untuk latihan. Install: `composer install && npm install && cp .env.example .env && php artisan key:generate && php artisan migrate`. Jalankan: `composer run dev`. Akses di http://localhost:8000
-
-</details>
-
-<details>
-<summary><b>📘 Format Tugas Kuliah</b></summary>
-
-# LAPORAN PROJECT CRUD LARAVEL REACT
-
-**Mata Kuliah**: Pemrograman Web Lanjut  
-**Nama**: [Nama Mahasiswa]  
-**NIM**: [NIM]  
-**Kelas**: [Kelas]
-
 ## 1. Pendahuluan
 Project ini merupakan implementasi aplikasi CRUD (Create, Read, Update, Delete) menggunakan Laravel sebagai backend dan React sebagai frontend dengan Inertia.js sebagai penghubung.
 
