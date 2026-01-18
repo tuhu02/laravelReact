@@ -13,9 +13,9 @@ interface Props{
 
 export default function PostsPage({ posts }: Props) {
     return (
-        <>
+        <div style={{ padding: '20px' }}>
             <div style={{ marginBottom: '20px', marginTop: '20px' }}>
-                <a href="/posts/create" style={{ background: '#22bd17', borderRadius: '6px', padding: '2px'}}>Tambah</a>
+                <a href="/posts/create" style={{ background: '#22bd17', borderRadius: '6px', padding: '5px', color: '#fff'}}>Tambah</a>
             </div>
             <table
                 style={{
@@ -54,7 +54,7 @@ export default function PostsPage({ posts }: Props) {
                                     delete
                                 </button>
                                 <button
-                                    onClick={() => router.get(`/posts/${post.id}`)} style={{  backgroundColor: '#3fbd00', padding: '5px', borderRadius: '6px' }}
+                                    onClick={() => router.get(`/posts/${post.id}`)} style={{  backgroundColor: '#3fbd00', padding: '5px', borderRadius: '6px ' }}
                                 >
                                     Edit
                                 </button>
@@ -63,6 +63,6 @@ export default function PostsPage({ posts }: Props) {
                     ))}
                 </tbody>
             </table>
-        </>
+        </div>
     );
 }
