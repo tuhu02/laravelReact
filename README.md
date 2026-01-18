@@ -144,7 +144,6 @@ This project is specifically created for CRUD practice, not for production use.
 </details>
 
 <details>
-<summary><b>🧼 README Ultra Minimal (≤10 baris)</b></summary>
 
 # Laravel React CRUD
 
